@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block NavBar %}
+        <a href= {% url "home" %} class="main-nav-item activate">Home</a>
+        <a href= {% url "addUltrasoundImg" %} class="main-nav-item">Detecting renal failure from an ultrasound kidney</a>
+    {% endblock  %}
+
+    {% block content %}
+            <!--Page Home-->
+                <div class="main-block">
+                    <div class="stat">
+                    <header id = "headStat1" name="headStat1">Model UAC Score</header>
+                    <div id="stat1"></div>
+                    </div>
+
+                    <div class="stat">
+                        <header id = "headStat2" name="headStat2">Model F1 Score</header>
+                        <div id="stat2"></div>
+                    </div>
+
+                    <div class="stat">
+                        <header id = "headStat3"  name="headStat3">Model accuracy</header>
+                        <div id="stat3"></div>
+                    </div>
+
+                    <div class= description>
+                        <h1>Project description</h1>
+                        <p>
+                        The most advanced analytical tools used in Africa, particularly in the healthcare sector, are often developed by other countries. Consequently, these products are not always well-suited to meet our specific needs. Our project aims to change this, not only by utilizing existing products but also by fostering innovation to transform Africa and the world.
+                        </p><p>
+                        We have developed a machine learning model capable of predicting kidney failure from ultrasound images and deployed it on this web plateforme.
+                        </p><p>
+                        This solution is designed to be a valuable clinical diagnostic tool, supporting medical decision-making in remote areas. It provides a crucial tool for monitoring kidney function in patients and determining appropriate treatment plans. The images used for this project are sourced from the healthcare system in Cameroon.
+                        </p>
+                    <div>
+
+                    <!--Mode d'emplois-->
+                    <div class="description">
+                        <h1>Mode of use</h1>
+                        <p> Follow these steps to detect renal failure from an ultrasound kidney :</p>
+                            <ul>
+                                <li><p>In the sidebar of the platform, navigate to the <a href= {% url "addUltrasoundImg" %}>Detecting renal failure from an ultrasound kidney</a> section.</p></li>
+                                <li><p>On the upload page, fill out the form and then upload an ultrasound image from your device.</p></li>
+                                <li><p>Once the image is uploaded, click the "Predict" button to start the detection process.</p></li>
+                                <li><p>Wait a few moments while our deep learning model analyzes the image.</p></li>
+                            </ul>
+                        </p></br>
+                    </div>
+                </div>
+     {% endblock  %}
+
+<!--Les requêtes AJAX ici-->
+    {% block AjaxScript %}
+        <script type="text/JAVASCRIPT">
+            // Précision du modèle
+            let AUC = 97
+            let F1Score = 96 ;
+            let accuracy = 95 ;
+
+            function StatAccurary(idStat, stat, count = 0) {
+                this.element = document.getElementById(idStat);
+                this.stat = stat;
+                this.count = count;
+                this.interval = setInterval(this.updateStat.bind(this), 1500 / this.stat);
+            }
+
+            StatAccurary.prototype.updateStat = function () {
+                if (this.count <= this.stat) {
+                    if (this.count >= this.stat*0.5) {
+                        this.element.textContent = this.count + "%";
+                    }
+                    if (this.count <= this.stat*0.8) {
+                        this.element.style.height = `${(this.count/this.stat)*100}%`;
+                    }
+                    this.count++;
+                } else {
+                    clearInterval(this.interval);
+                }
+            }
+            let stat1 = new StatAccurary('stat1', AUC);
+            let stat2 = new StatAccurary('stat2', F1Score);
+            let stat3 = new StatAccurary('stat3', accuracy);
+        </script>
+    {% endblock  %}
+

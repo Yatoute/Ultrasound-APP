@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block NavBar %}
+    <a href= {% url "home" %} class="main-nav-item">Home</a>
+    <a href= {% url "addUltrasoundImg" %} class="main-nav-item activate">Detecting renal failure from an ultrasound kidney</a>
+{% endblock  %}
+
+{% block content %}
+        <!-- Corps de la page -->
+        <form method="POST" name="addUltrasoundImg" id="addUltrasoundImg">
+            {% csrf_token %}
+            <input id="PatientName" name="PatientName" required type="text" placeholder="Patient name">
+
+            <label for="UltrasoundImg" class="custom-file-upload">
+                Add ultrasounds images
+            </label>
+            <input id="UltrasoundImg" name="UltrasoundImg" required type="file" accept=".jpg,.jpeg,.png" onchange="updateLabel()">
+             
+            <textarea id="noteMedical" name="noteMedical" required placeholder="Medical note"></textarea>
+          
+            <input id = "submit" type="submit", value="Predict">
+        </form>
+
+        {% comment %} Rédultat de la prédiction {% endcomment %}
+           <h1 id = "TitreResult">Results of Renal Ultrasound Analysis</h1>
+            <div id="prediction" class = "main-block">
+                <div class="col45" id="resultContent">
+                    <p id="result"></p>
+                </div>
+                <div id="preview" class="col45"> </div>
+            </div>
+
+{% endblock %}
+
+{% block AjaxScript %}
+    <script type="text/JAVASCRIPT">
+        document.getElementById('TitreResult').style.display = 'None'
+        document.getElementById('prediction').style.display = 'None'
+        
+        function updateLabel() {
+            var input = document.getElementById('UltrasoundImg');
+            var label = document.querySelector('label[for="UltrasoundImg"]');
+            var fileName = input.files[0].name;
+            var maxLength = 25; // Nombre maximum de caractères à afficher
+        
+            if (fileName.length > maxLength) {
+                var truncatedFileName = fileName.substring(0, maxLength - 3) + '...';
+                label.textContent = truncatedFileName;
+            } else {
+                label.textContent = fileName;
+            }
+        }
+
+        // Fonction pour animer l'affichage du texte
+            // Fonction pour animer l'affichage du texte
+            function typeWriter(text1, text2, elementId1, elementId2, speed) {
+                let i = 0;
+                function type() {
+                    if (i < text1.length) {
+                        document.getElementById(elementId1).innerHTML = text1.substring(0, i + 1); // Ajouter le texte progressivement
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                    else {
+                        document.getElementById(elementId2).innerHTML += text2
+                    }
+                }
+                type();
+            }
+     //La requête Ajax pour soumettre les données
+        document.querySelector("#submit").addEventListener("click", event => {
+            //Vérifier la validiter du formulaire
+            const form = document.querySelector("#addUltrasoundImg");
+            if (!form.checkValidity()) {
+                // Si le formulaire n'est pas valide, affiche les erreurs de validation natives du navigateur
+                form.reportValidity();
+                return;
+            }
+            //Prévisualiser l'image en attendant que AJAX renvoie les résultats de la prédiction
+            // Prévisualiser l'image
+            document.getElementById('addUltrasoundImg').style.display = 'None'
+            document.getElementById('TitreResult').style.visibility = 'visible';
+            document.getElementById('TitreResult').style.display = 'block';
+            document.getElementById('prediction').style.visibility = 'visible';
+            document.getElementById('prediction').style.display = 'flex';
+            let input = document.getElementById('UltrasoundImg');
+            let file = input.files[0];
+            let imageReader = new FileReader();
+
+            imageReader.onload = function(e) {
+                let preview = document.getElementById('preview');
+                preview.innerHTML = '<img src="' + e.target.result + '" alt="Prévisualisation de l\'image">';
+            }
+
+            imageReader.readAsDataURL(file); 
+            
+            //Faire la requête AJAX
+            event.preventDefault();
+            let formData = new FormData();
+            formData.append('PatientName', document.querySelector("#PatientName").value);
+            formData.append('UltrasoundImg', file);
+            formData.append('noteMedical', document.querySelector("#noteMedical").value);
+            let csrfTokenValue = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const request = new Request('{% url "predict" %}', {
+                method: 'POST',
+                body: formData,
+                headers: {'X-CSRFToken': csrfTokenValue}
+            });
+
+            fetch(request)
+                .then(response => response.json())
+
+                // Qu'est ce qu'on en fait du résultat ?
+                .then(result => {
+                    const resultElement = document.querySelector("#result");
+                    const textToDisplay1 = `
+                    <p>Our deep learning model analyzed the ultrasound image of the kidneys and predicted a <span class="highlight">${result.prediction}</span> risk that the patient suffers from kidney failure. This prediction is based on an advanced deep learning model that uses kidney ultrasound images to assess the risk of a patient suffering from kidney failure.</p>
+                    <strong>How it works:</strong>
+                    <ul>
+                        <li>Step 1: The patient's kidney ultrasound image is provided to the model.</li>
+                        <li>Step 2: The model uses advanced image processing techniques to extract important features.</li>
+                        <li>Step 3: The extracted features are analyzed by layers of artificial neurons to determine the risk of kidney disease.</li>
+                        <li>Step 4: The model generates a quantified prediction of the risk that the patient suffers from kidney failure.</li>
+                    </ul>
+                    <p>This type of analysis enables early detection of kidney diseases, providing valuable information to physicians for quick diagnosis and treatment. By using artificial intelligence, we can improve the accuracy and speed of medical diagnostics, thus providing better care to patients.</p></br>
+                    `;
+
+                    const textToDisplay2 = `
+                    <h2 id = "Summary">Summary :</h2>
+                    <ul>
+                        <li><p>Patient: <span class="highlight">${document.querySelector("#PatientName").value}</span></p<</li>
+                        <li><p>Medical Note: <span class="highlight">${document.querySelector("#noteMedical").value}</span></p></li>
+                        <li><p>Risk of kidney failure: <span class="highlight">${result.prediction}</span></p<</li>
+                    </ul>
+                    `;
+
+                    // Effacer le contenu précédent
+                    resultElement.innerHTML = '';
+
+                    // Animer le texte
+                    typeWriter(textToDisplay1, textToDisplay2, 'result', 'preview', 5);
+                    //
+                    
+                    
+                    // Attendre que la longueur du texte soit générée et multipliée par le délai de la fonction typeWriter
+
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+
+    </script>
+{% endblock AjaxScript %}

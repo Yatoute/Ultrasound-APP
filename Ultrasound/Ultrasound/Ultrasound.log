@@ -1,0 +1,727 @@
+NumExpr defaulting to 4 threads.
+OSError: write error
+OSError: write error
+OSError: write error
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 43, in predict
+    decompress_h5_file('home/EnsaeUltrasound/Utrasound-API/static/model/Hyperband.h5.gz', 'home/EnsaeUltrasound/Utrasound-API/static/model/Hyperband.h5')
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 55, in decompress_h5_file
+    with gzip.open(input_file, 'rb') as f_in:
+  File "/usr/local/lib/python3.10/gzip.py", line 58, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "/usr/local/lib/python3.10/gzip.py", line 174, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'home/EnsaeUltrasound/Utrasound-API/static/model/Hyperband.h5.gz'
+NumExpr defaulting to 4 threads.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 43, in predict
+    decompress_h5_file('/home/EnsaeUltrasound/Utrasound-API/static/model/Hyperband.h5.gz', '/home/EnsaeUltrasound/Utrasound-API/static/model/Hyperband.h5')
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 56, in decompress_h5_file
+    with open(output_file, 'wb') as f_out:
+  File "/usr/local/lib/python3.10/site-packages/PIL/Image.py", line 2933, in open
+    raise ValueError(f"bad mode {repr(mode)}")
+ValueError: bad mode 'wb'
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 43, in predict
+    decompress_h5_file('/static/model/Hyperband.h5.gz', '/static/model/Hyperband.h5')
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 56, in decompress_h5_file
+    with open(output_file, 'wb') as f_out:
+  File "/usr/local/lib/python3.10/site-packages/PIL/Image.py", line 2933, in open
+    raise ValueError(f"bad mode {repr(mode)}")
+ValueError: bad mode 'wb'
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+OSError: write error
+OSError: write error
+OSError: write error
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+OSError: write error
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+OSError: write error
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 41, in predict
+    model = load_model('static/model/Hyperband.h5')
+  File "/usr/local/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/usr/local/lib/python3.10/site-packages/keras/optimizers/optimizer_experimental/optimizer.py", line 94, in _process_kwargs
+    raise TypeError(f"{k} is not a valid argument, kwargs should be empty "
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f7b5c293f40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f7b5c293a30> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+OSError: write error
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /robots.txt
+NumExpr defaulting to 4 threads.
+OSError: write error
+NumExpr defaulting to 4 threads.
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /favicon.ico
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /favicon.ico
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+NumExpr defaulting to 4 threads.
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /robots.txt
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /sitemap.xml.gz
+Not Found: /robots.txt
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /sitemap.xml.gz
+Not Found: /robots.txt
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /favicon.ico
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap.txt
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+Not Found: /sitemap.txt
+NumExpr defaulting to 4 threads.
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.xml.gz
+Not Found: /robots.txt
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+Not Found: /sitemaps.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap.txt
+Not Found: /sitemap_index.xml
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+Not Found: /sitemap.txt
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.txt
+Not Found: /atom.xml
+Not Found: /sitemaps.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap_index.xml
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.txt
+Not Found: /robots.txt
+Not Found: /sitemap.txt
+NumExpr defaulting to 4 threads.
+Not Found: /sitemap.xml.gz
+OSError: write error
+Not Found: /sitemap.xml
+Not Found: /sitemap.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+Not Found: /sitemap.xml.gz
+Not Found: /sitemap.xml.gz
+Not Found: /sitemaps.xml
+NumExpr defaulting to 4 threads.
+Not Found: /atom.xml
+Not Found: /sitemap.xml
+Not Found: /sitemap_index.xml
+Not Found: /sitemap_index.xml
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Not Found: /sitemap.txt
+Not Found: /sitemaps.xml
+Not Found: /sitemaps.xml
+Not Found: /robots.txt
+Not Found: /atom.xml
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /atom.xml
+Not Found: /robots.txt
+NumExpr defaulting to 4 threads.
+Not Found: /robots.txt
+OSError: write error
+Not Found: /atom.xml
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+OSError: write error
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7013555ba710> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x701354210670> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7e60183e8b80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7e601b067910> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7be178f5c8b0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7be178298e50> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 50176 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+Not Found: /favicon.ico
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+OSError: write error
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x76b67fe6caf0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x76b67c398550> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/EnsaeUltrasound/Utrasound-API/Ultrasound/views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+Not Found: /favicon.ico
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+OSError: write error
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /predict/
+Traceback (most recent call last):
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\DevTools\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\views.py", line 36, in predict
+    X = array(Img).reshape(1, 224, 224, 3)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 200704 into shape (1,224,224,3)
+D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+D:\ENSAI-2A\Django\APIC\Utrasound-API\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
