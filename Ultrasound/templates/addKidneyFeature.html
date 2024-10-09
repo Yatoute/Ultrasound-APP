@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block NavBar %}
+    <a href= '{% url "home" %}' class="main-nav-item">Home</a>
+    <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item activate">Detecting renal failure from an ultrasound kidney</a>
+    <a href= '#' class="main-nav-item">Detection of renal failure based on kidney feature</a>
+{% endblock  %}
+
+{% block content %}
+        <!-- Corps de la page -->
+        <form method="POST" name="addUltrasoundImg" id="addUltrasoundImg">
+            {% csrf_token %}
+            <input id="PatientName" name="PatientName" required type="text" placeholder="Patient name">
+            
+            <input id="age" name="age" required type="int" placeholder="Patient age">
+            
+            <select id="typeDiabete" name="typeDiabete" required placeholder="Type of diabetes">
+                <option value=1>Sucré</option>
+                <option value=0>Non sucré</option>
+            </select>
+
+            <input id="tensionArterielle" name="tensionArterielle" required type="int" placeholder="Blood pressure (systolic / diastolic)">
+
+            <textarea id="noteMedical" name="noteMedical" required placeholder="Medical note"></textarea>
+          
+            <input id = "submit" type="submit", value="Predict">
+        </form>
+
+        {% comment %} Rédultat de la prédiction {% endcomment %}
+           <h1 id = "TitreResult">Results of Renal Ultrasound Analysis</h1>
+            <div id="prediction" class = "main-block">
+                <div class="col45" id="resultContent">
+                    <p id="result"></p>
+                </div>
+                <div id="preview" class="col45"> </div>
+            </div>
+
+{% endblock %}

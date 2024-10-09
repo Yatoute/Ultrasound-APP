@@ -21,9 +21,13 @@ def addUltrasoundImg(request):
 
     return render(request, 'addUltrasoundImg.html')
 
+def addKidneyFeature(request):
+
+    return render(request, 'addKidneyFeature.html')
+
 
 # Decting renal failure
-def predict(request):
+def predictFromUltrasoundImg(request):
     if request.method == 'POST':
         PatientName = request.POST.get('PatientName')
         UltrasoundImg = request.FILES.get('UltrasoundImg')

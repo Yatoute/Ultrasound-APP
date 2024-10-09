@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'home'),
     path('addUltrasoundImg/', views.addUltrasoundImg, name = 'addUltrasoundImg'),
-    path('predict/', views.predict, name = 'predict')
+    path('detection-of-renal-failure-based-on-kidney-feature/', views.addKidneyFeature, name = 'addKidneyFeature'),
+    path('predict/', views.predictFromUltrasoundImg, name = 'predict')
 ]
