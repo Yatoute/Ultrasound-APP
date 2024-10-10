@@ -3,8 +3,8 @@
 
     {% block NavBar %}
         <a href= '{% url "home" %}' class="main-nav-item activate">Home</a>
-        <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item">Detecting renal failure from an ultrasound kidney</a>
-        <a href= '#' class="main-nav-item">Detection of renal failure based on kidney feature</a>
+        <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item">Detecting renal failure from an ultrasound image</a>
+        <a href= '{% url "addKidneyFeature" %}' class="main-nav-item">Detection of renal failure based on kidney feature</a>
     {% endblock  %}
 
     {% block content %}

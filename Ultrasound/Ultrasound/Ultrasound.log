@@ -791,3 +791,184 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for '#' not found. '#' is not a valid view function or pattern name.
 Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\ENSAI-2A\DevDjango\Ultrasound\Ultrasound\views.py changed, reloading.
+Watching for file changes with StatReloader
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+No training configuration found in the save file, so the model was *not* compiled. Compile it manually.

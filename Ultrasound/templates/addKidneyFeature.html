@@ -1,39 +1,188 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}<link rel="stylesheet" href="{% static 'css/formKF.css' %}">{% endblock  %}
+
 {% block NavBar %}
     <a href= '{% url "home" %}' class="main-nav-item">Home</a>
-    <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item activate">Detecting renal failure from an ultrasound kidney</a>
-    <a href= '#' class="main-nav-item">Detection of renal failure based on kidney feature</a>
+    <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item">Detecting renal failure from an ultrasound image</a>
+    <a href= '{% url "addKidneyFeature" %}' class="main-nav-item activate">Detection of renal failure based on kidney feature</a>
 {% endblock  %}
 
 {% block content %}
         <!-- Corps de la page -->
-        <form method="POST" name="addUltrasoundImg" id="addUltrasoundImg">
-            {% csrf_token %}
-            <input id="PatientName" name="PatientName" required type="text" placeholder="Patient name">
+        <h1>Renal failure based on kidney feature</h1>
+        <form class="cf" method="POST" name="addKidneyFeatures" id="addKidneyFeatures">
+        {% csrf_token %}
+        <div class="half left cf">
             
-            <input id="age" name="age" required type="int" placeholder="Patient age">
+            {% comment %} Nom du pation {% endcomment %}
+            <label for ="patient-name">Patient name</label>
+            <input type="text" id="patient-name" name ="patient-name" placeholder="Patient name">
             
-            <select id="typeDiabete" name="typeDiabete" required placeholder="Type of diabetes">
-                <option value=1>Sucré</option>
-                <option value=0>Non sucré</option>
+            {% comment %} Type de diabètre : sucré ou non sucré {% endcomment %}
+            <label for="type-diabete">The patient's type of diabetes</label>
+            <select id="type-diabete" name = "type-diabete">
+                <option value="" disabled selected>Choose...</option>
+                <option value=1>mellitus diabetes</option>
+                <option value=0>non-mellitus diabetes</option>
             </select>
 
-            <input id="tensionArterielle" name="tensionArterielle" required type="int" placeholder="Blood pressure (systolic / diastolic)">
+            {% comment %} Tension artérielle du patient {% endcomment %}
+            <label for ="tension-arterielle">Tension artérielle du patient</label>
+            <input id="tension-arterielle" name="tension-arterielle" required type="number" placeholder=0123 min="0" step="1">
+            
+            {% comment %} Gravité spécifique {% endcomment %}
+            <label for ="gravite-specifique">Gravité spécifique</label>
+            <input id="gravite-specifique" name="gravite-specifique" required type="number" placeholder=0123 min="0" step="1">
+            
+            {% comment %} Créatine sérique {% endcomment %}
+            <label for ="creatinine-serique">Créatinine sérique</label>
+            <input id="creatinine-serique" name="creatinine-serique" required type="number" placeholder=0123 min="0" step="1">
+            
+            {% comment %} Nite médicale {% endcomment %}
+            <textarea name="message" type="text" id="note-medicale" placeholder="Medical note"></textarea>
 
-            <textarea id="noteMedical" name="noteMedical" required placeholder="Medical note"></textarea>
-          
-            <input id = "submit" type="submit", value="Predict">
-        </form>
+        </div>
+
+        <div class="half right cf">
+        
+            {% comment %} Age du patient {% endcomment %}
+            <label for="age">Patient age</label>
+            <input id="age" name="age" required type="number" placeholder=0123 min="0" step="1">
+    
+            {% comment %} Présence d'hypertension {% endcomment %}  
+            <label for="hypertension">Presence of hypertension</label>
+            <select id="hypertension", name="hypertension">
+                <option value="" disabled selected>Choose...</option>
+                <option value=1>OUI</option>
+                <option value=0>NON</option>
+            </select>
+            
+            {% comment %}  Urée sanguine {% endcomment %}
+            <label for ="uree-sanguine">Urée sanguine</label>
+            <input id="uree-sanguine" name="uree-sanguine" required type="number" placeholder=0123 min="0" step="1">
+
+            {% comment %} Glycémie aléatoire {% endcomment %}
+            <label for ="glycemie-aleatoire">Glycémie aléatoire</label>
+            <input id="glycemie-aleatoire" name="glycemie-aleatoire" required type="number" placeholder=0123 min="0" step="1">
+            
+            {% comment %} Albumine {% endcomment %}
+            <label for ="albumine">Albumine</label>
+            <input id="albumine" name="albumine" required type="number" placeholder=0123 min="0" step="1">
+
+            {% comment %} Prédire {% endcomment %}
+            <input type="submit" value="Prédire" id="input-submit">
+    
+            </div>  
+            
+            </form>
+        
+
 
         {% comment %} Rédultat de la prédiction {% endcomment %}
            <h1 id = "TitreResult">Results of Renal Ultrasound Analysis</h1>
-            <div id="prediction" class = "main-block">
-                <div class="col45" id="resultContent">
-                    <p id="result"></p>
-                </div>
-                <div id="preview" class="col45"> </div>
+
+            <div class="col457" id="resultContent">
+                <p id="result"></p>
+
+                <p id="summary"></p>
             </div>
+               
 
 {% endblock %}
+
+{% block AjaxScript %}
+    <script type="text/JAVASCRIPT">
+        document.getElementById('TitreResult').style.display = 'None' ;
+
+        // Fonction pour animer l'affichage du texte
+            // Fonction pour animer l'affichage du texte
+            function typeWriter(text1, text2, elementId1, elementId2, speed) {
+                let i = 0;
+                function type() {
+                    if (i < text1.length) {
+                        document.getElementById(elementId1).innerHTML = text1.substring(0, i + 1); // Ajouter le texte progressivement
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                    else {
+                        document.getElementById(elementId2).innerHTML += text2
+                    }
+                }
+                type();
+            }
+     //La requête Ajax pour soumettre les données
+        console.log('Bouton cliqué, mais le formulaire n\'a pas été soumis.');
+
+        document.querySelector("#input-submit").addEventListener("click", event => {
+            //Vérifier la validiter du formulaire
+            const form = document.querySelector("#addKidneyFeatures");
+            if (!form.checkValidity()) {
+                // Si le formulaire n'est pas valide, affiche les erreurs de validation natives du navigateur
+                form.reportValidity();
+                return;
+            }
+            // Afficher la section résultat
+            document.getElementById('TitreResult').style.visibility = 'visible';
+            document.getElementById('TitreResult').style.display = 'block';
+    
+            //Faire la requête AJAX
+            event.preventDefault();
+            let formData = new FormData();
+            formData.append('PatientName', document.querySelector("#patient-name").value);
+            formData.append('TypeDiabete', document.querySelector("#type-diabete").value);
+            formData.append('TensionArterielle', document.querySelector("#tension-arterielle").value);
+            formData.append('GraviteSpecifique', document.querySelector("#gravite-specifique").value);
+            formData.append('CreatinineSerique', document.querySelector("#creatinine-serique").value);
+            formData.append('Age', document.querySelector("#age").value);
+            formData.append('Hypertension', document.querySelector("#hypertension").value);
+            formData.append('UreeSanguine', document.querySelector("#uree-sanguine").value);
+            formData.append('GlycemieAleatoire', document.querySelector("#glycemie-aleatoire").value);
+            formData.append('Albumine', document.querySelector("#albumine").value);
+            formData.append('NoteMedicale', document.querySelector("#note-medicale").value);
+            let csrfTokenValue = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const request = new Request('{% url "predictFromKidneyFeatures" %}', {
+                method: 'POST',
+                body: formData,
+                headers: {'X-CSRFToken': csrfTokenValue}
+            });
+
+            fetch(request)
+                .then(response => response.json())
+
+                // Qu'est ce qu'on en fait du résultat ?
+                .then(result => {
+                    const resultElement = document.querySelector("#result");
+                    const textToDisplay1 = `
+                    <p>Our machine learning model analyzed the features of the kidneys ultrasoung and predicted a <span class="highlight">${result.prediction}</span> risk that the patient suffers from kidney failure. This prediction is based on a logistic regression model that uses kidney features to assess the risk of a patient suffering from kidney failure.</p>
+                
+                    <p>This type of analysis enables early detection of kidney diseases, providing valuable information to physicians for quick diagnosis and treatment. By using artificial intelligence, we can improve the accuracy and speed of medical diagnostics, thus providing better care to patients.</p></br>
+                    `;
+
+                    const textToDisplay2 = `
+                    <h2 id = "Summary">Summary :</h2>
+                    <ul>
+                        <li><p>Patient: <span class="highlight">${document.querySelector("#patient-name").value}</span></p<</li>
+                        <li><p>Medical Note: <span class="highlight">${document.querySelector("#note-medicale").value}</span></p></li>
+                        <li><p>Risk of kidney failure: <span class="highlight">${result.prediction}</span></p<</li>
+                    </ul>
+                    `;
+
+                    // Effacer le contenu précédent
+                    resultElement.innerHTML = '';
+
+                    // Animer le texte
+                    typeWriter(textToDisplay1, textToDisplay2, 'result', 'summary', 5);
+                    //
+                    
+                    
+                    // Attendre que la longueur du texte soit générée et multipliée par le délai de la fonction typeWriter
+
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+
+    </script>
+{% endblock AjaxScript %}

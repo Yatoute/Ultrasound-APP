@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}<link rel="stylesheet" href="{% static 'css/form.css' %}">{% endblock  %}
+
 {% block NavBar %}
     <a href= '{% url "home" %}' class="main-nav-item">Home</a>
-    <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item activate">Detecting renal failure from an ultrasound kidney</a>
-    <a href= '#' class="main-nav-item">Detection of renal failure based on kidney feature</a>
+    <a href= '{% url "addUltrasoundImg" %}' class="main-nav-item activate">Detecting renal failure from an ultrasound image</a>
+    <a href= '{% url "addKidneyFeature" %}' class="main-nav-item">Detection of renal failure based on kidney feature</a>
 {% endblock  %}
 
 {% block content %}
@@ -103,7 +105,7 @@
             formData.append('UltrasoundImg', file);
             formData.append('noteMedical', document.querySelector("#noteMedical").value);
             let csrfTokenValue = document.querySelector('[name=csrfmiddlewaretoken]').value;
-            const request = new Request('{% url "predict" %}', {
+            const request = new Request('{% url "predictFromUltrasoundImg" %}', {
                 method: 'POST',
                 body: formData,
                 headers: {'X-CSRFToken': csrfTokenValue}

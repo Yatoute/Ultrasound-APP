@@ -21,7 +21,9 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'home'),
-    path('addUltrasoundImg/', views.addUltrasoundImg, name = 'addUltrasoundImg'),
-    path('detection-of-renal-failure-based-on-kidney-feature/', views.addKidneyFeature, name = 'addKidneyFeature'),
-    path('predict/', views.predictFromUltrasoundImg, name = 'predict')
+    path('detection-of-renal-failure-based-on-kidney-ultrasound-images/', views.addUltrasoundImg, name = 'addUltrasoundImg'),
+    path('detection-of-renal-failure-based-on-kidney-feature/', views.addKidneyFeatures, name = 'addKidneyFeature'),
+    path('predict-from-kidney-ultrasound-images/', views.predictFromUltrasoundImg, name = 'predictFromUltrasoundImg'),
+    path('predict-from-kidney-features/', views.predictFromKidneyFeatures, name = 'predictFromKidneyFeatures'),
+
 ]
