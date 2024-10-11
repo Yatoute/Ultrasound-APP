@@ -18,11 +18,11 @@
             
             {% comment %} Nom du pation {% endcomment %}
             <label for ="patient-name">Patient name</label>
-            <input type="text" id="patient-name" name ="patient-name" placeholder="Patient name">
+            <input required type="text" id="patient-name" name ="patient-name" placeholder="Patient name">
             
             {% comment %} Type de diabètre : sucré ou non sucré {% endcomment %}
             <label for="type-diabete">The patient's type of diabetes</label>
-            <select id="type-diabete" name = "type-diabete">
+            <select id="type-diabete" name = "type-diabete" required>
                 <option value="" disabled selected>Choose...</option>
                 <option value=1>mellitus diabetes</option>
                 <option value=0>non-mellitus diabetes</option>
@@ -53,7 +53,7 @@
     
             {% comment %} Présence d'hypertension {% endcomment %}  
             <label for="hypertension">Presence of hypertension</label>
-            <select id="hypertension", name="hypertension">
+            <select id="hypertension" name="hypertension" required>
                 <option value="" disabled selected>Choose...</option>
                 <option value=1>OUI</option>
                 <option value=0>NON</option>
@@ -107,7 +107,7 @@
                         setTimeout(type, speed);
                     }
                     else {
-                        document.getElementById(elementId2).innerHTML += text2
+                        document.getElementById(elementId2).innerHTML = text2
                     }
                 }
                 type();
@@ -155,9 +155,9 @@
                 .then(result => {
                     const resultElement = document.querySelector("#result");
                     const textToDisplay1 = `
-                    <p>Our machine learning model analyzed the features of the kidneys ultrasoung and predicted a <span class="highlight">${result.prediction}</span> risk that the patient suffers from kidney failure. This prediction is based on a logistic regression model that uses kidney features to assess the risk of a patient suffering from kidney failure.</p>
+                    <p>Our machine learning model analyzed the features of the kidneys ultrasoung and estimates that <span class="highlight">${result.prediction}</span>. This estimates is based on a logistic regression model that uses kidney features to assess the risk of a patient suffering from kidney failure.</p>
                 
-                    <p>This type of analysis enables early detection of kidney diseases, providing valuable information to physicians for quick diagnosis and treatment. By using artificial intelligence, we can improve the accuracy and speed of medical diagnostics, thus providing better care to patients.</p></br>
+                    <p>This type of analysis enables early detection of kidney diseases, providing valuable information to physicians for quick diagnosis and treatment. By using artificial intelligence, we can improve the accuracy and speed of medical diagnostics, thus providing better care to patients.</p>
                     `;
 
                     const textToDisplay2 = `

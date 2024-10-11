@@ -87,9 +87,12 @@ def predictFromKidneyFeatures(request):
        
         # Prediction
         y_predict = model.predict(data)
-        result = float(y_predict)
-        #result =0.9916
-        result = f"{result * 100:.2f}%"
+        y_predict = float(y_predict)
+        if y_predict == 1:
+            result = "the patient is at risk of renal failure"
+        else:
+            result = "the patient presents no risk of renal failure"
+        
         # Retourner la réponse au format JSON
         return JsonResponse({'prediction': result})
     else:
